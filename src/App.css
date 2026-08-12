@@ -1,38 +1,153 @@
-.App {
+/* ======= App Styling ======= */
+
+body {
+  background-color: #f5f6fa;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Main container*/
+.container {
   text-align: center;
+  margin-top: 50px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Header */
+.title {
+  font-size: 2rem;
+  color: #333;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Input Section*/
+.input-section {
+  margin-top: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.filter-section {
+  margin-top: 20px;
+}
+
+.filter-button {
+  background-color: #28a745;
   color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
 }
 
-.App-link {
-  color: #61dafb;
+.filter-button:hover {
+  background-color: #218838;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.task-input {
+  padding: 10px;
+  width: 250px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+
+.task-input:focus {
+  border-color: #007bff;
+}
+
+.add-button {
+  padding: 10px 15px;
+  margin-left: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.add-button:hover {
+  background-color: #0056b3;
+}
+
+/* Task list */
+.task-list {
+  margin-top: 30px;
+}
+
+.empty-text {
+  color: #888;
+  font-style: italic;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.task-item {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  width: 320px;
+  margin: 10px auto;
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+}
+
+/* When a task is completed */
+.task-item.completed {
+  background-color: #e9fce9;
+}
+
+.task-item.completed .task-text{
+  text-decoration: line-through;
+  color: green;
+  font-weight: bold;
+}
+
+.buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.edit-button {
+  background-color: orange;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.edit-button:hover {
+  background-color: darkorange;
+}
+
+.delete-button {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.delete-button:hover {
+  background-color: darkred;
+}
+
+/* Mobile Layout */
+@media (max-width: 600px) {
+  .input-selection {
+    flex-direction: column;
+    padding: 10px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .task-input {
+    width: 200px;
   }
 }
